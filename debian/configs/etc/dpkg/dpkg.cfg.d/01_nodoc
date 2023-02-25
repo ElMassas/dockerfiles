@@ -1,0 +1,14 @@
+# /etc/dpkg/dpkg.cfg.d/01-nodoc
+
+# Delete manual pages
+path-exclude=/usr/share/man/*
+
+# Delete docs except copyright
+path-exclude=/usr/share/doc/*
+path-exclude=/usr/share/lintian/*
+path-exclude=/usr/share/linda/*
+path-include=/usr/share/doc/*/copyright
+
+# disable apt installing locales other than en
+path-exclude=/usr/share/locale/*
+path-include=/usr/share/locale/en
